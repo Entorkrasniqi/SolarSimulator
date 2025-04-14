@@ -1,4 +1,4 @@
-# Solar Panel Power Output Simulation  
+# Solar Panel Power Output Simulation
 
 ## Conceptual Model  
 This simulation estimates solar panel power output under varying weather conditions. It predicts how factors such as temperature, cloud cover, wind speed, and solar irradiance impact solar energy generation.  
@@ -49,7 +49,26 @@ The simulation provides the following performance metrics:
 - Hourly, daily, and monthly power generation data.  
 - Utilization rates: Efficiency of the solar panel system under specific conditions.  
 - Throughput: Total energy generated over a given period.  
-- **Optional**: Queue lengths for modeling multiple systems or regions.  
+- **Optional**: Queue lengths for modeling multiple systems or regions.
+
+## Running the Project
+To run the simulation, follow these steps:
+
+### MacOS
+1. Open the terminal.
+2. Go to the "demo" directory.
+3. Run the command:
+   ```bash
+   mvn javafx:run
+   ```
+
+### Windows
+1. Open the command prompt.
+2. Go to the "demo" directory.
+3. Run the command:
+   ```bash
+   mvn javafx:run
+   ```
 
 ## Conclusion  
 This simulation serves as a valuable tool for solar energy stakeholders, enabling better decision-making and optimized solar panel installations by analyzing the impact of weather conditions on energy production.  
