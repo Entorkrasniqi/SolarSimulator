@@ -1,4 +1,12 @@
-com/solar/App.class
-com/solar/PrimaryController.class
-com/solar/SecondaryController.class
+com/solar/MapSelector$LocationData.class
+com/solar/MapSelector.class
+com/solar/MapSelector$2.class
+controller/SolarPanelCalculatorController.class
+com/solar/MapSelector$1.class
 module-info.class
+types/Event.class
+model/EventQueue.class
+types/EventType.class
+com/solar/SolarPanelCalculatorApp.class
+com/solar/MapSelector$JavaConnector.class
+types/EventHandler.class
