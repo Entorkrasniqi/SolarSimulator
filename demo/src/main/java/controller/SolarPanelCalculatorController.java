@@ -62,10 +62,10 @@ public class SolarPanelCalculatorController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // Initialize ComboBoxes with values
-        pvTechCombo.getItems().addAll("Crystalline silicon", "CIS", "CdTe", "Unknown");
+        pvTechCombo.getItems().addAll("Crystalline silicon", "Thin-Film CIS/CIGS", "Cadmium Telluride (CdTe)", "Amorphous Silicon (a-Si)", "Heterojunction Technology (HJT)");
         pvTechCombo.setValue("Crystalline silicon");
         
-        mountingPosCombo.getItems().addAll("Free-standing", "Building integrated");
+        mountingPosCombo.getItems().addAll("Free-standing", "Roof-mounted with gap", "Building integrated");
         mountingPosCombo.setValue("Free-standing");
         
         // Initialize form validation listeners

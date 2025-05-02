@@ -1,4 +1,4 @@
-package com.solar.calculator;
+package calculator;
 
 
 /**
@@ -100,6 +100,4 @@ public class Calculator {
         System.out.println("Total Power Output: " + powerOutput + " W");
         return powerOutput;
     }
-    
-
 }
