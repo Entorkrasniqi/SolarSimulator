@@ -5,6 +5,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -81,62 +82,66 @@
                <Insets bottom="10" left="10" right="10" top="20" />
             </padding>
             <columnConstraints>
-               <ColumnConstraints hgrow="SOMETIMES" minWidth="150" />
-               <ColumnConstraints hgrow="SOMETIMES" minWidth="250" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="250.0" />
             </columnConstraints>
             
-            <!-- Solar radiation database -->
-            <Label text="Solar radiation database*" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-            <ComboBox fx:id="solarDbCombo" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-            
             <!-- PV Technology -->
-            <Label text="PV technology*" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label text="PV technology*" GridPane.rowIndex="1" />
             <ComboBox fx:id="pvTechCombo" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             
             <!-- Installed peak PV power -->
-            <Label text="Installed peak PV power [kWp]*" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label text="Installed peak PV power [kWp]*" GridPane.rowIndex="2" />
             <TextField fx:id="peakPowerField" text="1" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
             
             <!-- System loss -->
-            <Label text="System loss [%]*" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Label text="System loss [%]*" GridPane.rowIndex="3" />
             <TextField fx:id="systemLossField" prefWidth="100" text="14" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
             
             <!-- Fixed mounting section header -->
-            <Label style="-fx-font-weight: bold;" text="Fixed mounting options" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Label style="-fx-font-weight: bold;" text="Fixed mounting options" GridPane.columnSpan="2" GridPane.rowIndex="5" />
             
             <!-- Mounting position -->
-            <Label text="Mounting position*" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-            <ComboBox fx:id="mountingPosCombo" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Mounting position*" GridPane.rowIndex="6" />
+            <ComboBox fx:id="mountingPosCombo" prefWidth="250" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             
             <!-- Slope -->
-            <Label text="Slope [°]*" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-            <HBox alignment="CENTER_LEFT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Label text="Slope [°]*" GridPane.rowIndex="7" />
+            <HBox alignment="CENTER_LEFT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <TextField fx:id="slopeField" alignment="CENTER_RIGHT" prefWidth="100.0" text="35" />
                <CheckBox fx:id="optimizeSlopeCb" text="Optimize slope" />
             </HBox>
             
             <!-- Azimuth -->
-            <Label text="Azimuth [°]*" GridPane.columnIndex="0" GridPane.rowIndex="7" />
-            <HBox alignment="CENTER_LEFT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <Label text="Azimuth [°]*" GridPane.rowIndex="8" />
+            <HBox alignment="CENTER_LEFT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="8">
                <TextField fx:id="azimuthField" alignment="CENTER_RIGHT" prefWidth="100" text="0" />
                <CheckBox fx:id="optimizeAzimuthCb" text="Optimize slope and azimuth" />
             </HBox>
             
             <!-- PV electricity price -->
-            <CheckBox fx:id="pvElectricityPriceCb" text="PV electricity price" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <CheckBox fx:id="pvElectricityPriceCb" text="PV electricity price" GridPane.rowIndex="9" />
             
             <!-- PV system cost -->
-            <Label text="PV system cost (your currency)" GridPane.columnIndex="0" GridPane.rowIndex="9" />
-            <TextField fx:id="pvSystemCostField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+            <Label text="PV system cost in euros" GridPane.rowIndex="10" />
+            <TextField fx:id="pvSystemCostField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
             
             <!-- Interest -->
-            <Label text="Interest [%/year]" GridPane.columnIndex="0" GridPane.rowIndex="10" />
-            <TextField fx:id="interestField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+            <Label text="Interest [%/year]" GridPane.rowIndex="11" />
+            <TextField fx:id="interestField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
             
             <!-- Lifetime -->
-            <Label text="Lifetime [years]" GridPane.columnIndex="0" GridPane.rowIndex="11" />
-            <TextField fx:id="lifetimeField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
+            <Label text="Lifetime [years]" GridPane.rowIndex="12" />
+            <TextField fx:id="lifetimeField" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="12" />
+            <Separator prefWidth="200.0" GridPane.rowIndex="4" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="PV area [m²]*" />
+            <TextField prefHeight="38.0" prefWidth="275.0" GridPane.columnIndex="1" />
             <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
                <RowConstraints />
                <RowConstraints />
                <RowConstraints />

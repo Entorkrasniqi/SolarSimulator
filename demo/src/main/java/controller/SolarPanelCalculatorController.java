@@ -33,7 +33,6 @@ public class SolarPanelCalculatorController implements Initializable {
     
     // Main Form
     @FXML private Button helpBtn;
-    @FXML private ComboBox<String> solarDbCombo;
     @FXML private ComboBox<String> pvTechCombo;
     @FXML private TextField peakPowerField;
     @FXML private TextField systemLossField;
@@ -63,8 +62,6 @@ public class SolarPanelCalculatorController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // Initialize ComboBoxes with values
-        solarDbCombo.getItems().addAll("PVGIS-SARAH2", "PVGIS-ERA5", "PVGIS-COSMO");
-        
         pvTechCombo.getItems().addAll("Crystalline silicon", "CIS", "CdTe", "Unknown");
         pvTechCombo.setValue("Crystalline silicon");
         

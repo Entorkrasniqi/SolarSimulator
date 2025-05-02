@@ -1,12 +1,12 @@
-com/solar/ImprovedMapSelector$2.class
+com/solar/MapSelector$LocationData.class
+com/solar/MapSelector.class
+com/solar/MapSelector$2.class
 controller/SolarPanelCalculatorController.class
-com/solar/ImprovedMapSelector$1.class
-com/solar/ImprovedMapSelector.class
+com/solar/MapSelector$1.class
 module-info.class
 types/Event.class
 model/EventQueue.class
 types/EventType.class
 com/solar/SolarPanelCalculatorApp.class
+com/solar/MapSelector$JavaConnector.class
 types/EventHandler.class
-com/solar/ImprovedMapSelector$JavaConnector.class
-com/solar/ImprovedMapSelector$LocationData.class
