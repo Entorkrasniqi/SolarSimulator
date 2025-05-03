@@ -1,18 +1,7 @@
 package types;
 
-enum PanelTechnology {
-    CRYSTALLINE_SILICON,
-    THIN_FILM,
-    CADMIUM_TELLURIDE,
-    AMORPHOUS_SILICON,
-    HETEROJUNCTION,
-}
-
-enum MountingType {
-    FREE_STANDING,
-    ROOF_MOUNTED,
-    BUILDING_INTEGRATED
-}
+import types.enums.MountingType;
+import types.enums.PanelTechnology;
 
 public class Panel {
     private double panelArea; // m²
@@ -84,6 +73,9 @@ public class Panel {
                 break;
             case BUILDING_INTEGRATED:
                 this.coolingFactor = 0.04; // 0.04°C per m/s
+                break;
+            case ROOF_MOUNTED_WITH_GAP:
+                this.coolingFactor = 0.07; // 0.07°C per m/s
                 break;
             default:
                 this.coolingFactor = 0.06; // Default value
@@ -192,5 +184,14 @@ public class Panel {
     
     public MountingType getMountingType() {
         return mountingType;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Panel [Area: %.2f m², Angle of Incidence: %.2f°, Efficiency: %.2f%%, "
+                + "Temperature Coefficient: %.4f, Cooling Factor: %.2f, Power Output: %.2f W, "
+                + "Technology: %s, Mounting Type: %s]", 
+                panelArea, angleOfIncidence, panelEfficiency * 100, temperatureCoefficient, 
+                coolingFactor, powerOutput, panelTechnology, mountingType);
     }
 }

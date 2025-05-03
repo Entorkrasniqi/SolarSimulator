@@ -1,4 +1,4 @@
-package types;
+package types.enums;
 
 public enum EventType {
     USER_SETTINGS,

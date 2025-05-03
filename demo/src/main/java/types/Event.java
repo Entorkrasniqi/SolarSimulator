@@ -1,5 +1,7 @@
 package types;
 
+import types.enums.EventType;
+
 public abstract class Event {
     private final EventType type;
     private final long timestamp;

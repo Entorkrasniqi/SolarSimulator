@@ -1,11 +1,11 @@
 package model;
 
-import types.EventType;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 import types.*;
+import types.enums.EventType;
 
 
 public class EventQueue {
@@ -45,6 +45,7 @@ public class EventQueue {
                 if (event != null) {
                     EventHandler handler = handlers.get(event.getType());
                     if (handler != null) {
+                        System.out.println("Processing event: " + event.getType() + " at " + event.getTimestamp());
                         handler.handle(event);
                     } else {
                         System.err.println("No handler registered for event type: " + event.getType());

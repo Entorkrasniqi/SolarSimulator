@@ -21,7 +21,7 @@ public class WeatherData {
     private double temperature;
     private double windSpeed;
     private double irradiance;
-    private int cloudCover;
+    private double cloudCover;
 
     /**
      * Constructs a WeatherData object with specified values.
@@ -31,7 +31,7 @@ public class WeatherData {
      * @param irradiance Solar irradiance in watts per square meter
      * @param cloudCover Cloud cover as a percentage (0-100%)
      */
-    public WeatherData(double temperature, double windSpeed, int cloudCover, double irradiance) {
+    public WeatherData(double temperature, double windSpeed, double cloudCover, double irradiance) {
         this.temperature = temperature;
         this.windSpeed = windSpeed;
         this.cloudCover = cloudCover;
@@ -50,8 +50,12 @@ public class WeatherData {
         return irradiance;
     }
 
-    public int getCloudCover() {
+    public double getCloudCover() {
         return cloudCover;
+    }
+
+    public double getSolarIrradiance() {
+        return irradiance;
     }
 
     public void setTemperature(double temperature) {
@@ -68,5 +72,12 @@ public class WeatherData {
 
     public void setCloudCover(int cloudCover) {
         this.cloudCover = cloudCover;
+    }
+
+    public void update(WeatherData newWeatherData) {
+        this.temperature = newWeatherData.getTemperature();
+        this.windSpeed = newWeatherData.getWindSpeed();
+        this.irradiance = newWeatherData.getIrradiance();
+        this.cloudCover = newWeatherData.getCloudCover();
     }
 }

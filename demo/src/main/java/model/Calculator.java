@@ -1,5 +1,8 @@
 package model;
 
+import types.Panel;
+import types.WeatherData;
+
 
 /**
  * The Calculator class provides methods to perform various calculations
@@ -7,6 +10,12 @@ package model;
  * temperature, wind cooling, and angle of incidence.
  */
 public class Calculator {
+    private Panel settings;
+
+    public void updateSettings(Panel settings) {
+        this.settings = settings;
+    }
+
     /**
      * Calculates the adjusted solar irradiance based on cloud cover.
      *
@@ -68,32 +77,39 @@ public class Calculator {
         return angleAdjustedIrradiance * panelArea * panelEfficiency * temperatureEfficiency;
     }
 
-    public double runCalc(){
-        // Example inputs
-        double solarIrradiance = 800; // W/m²
-        
-        // Weather forecast
-        double cloudCover = 0.3; // 30%
-        double currentTemperature = 35; // °C
-        double windSpeed = 5; // m/s
-        
-        // Solar panel
-        double panelEfficiency = 0.20; // 20%
-        double panelArea = 1.5; // m²
-        double angleOfIncidence = 30; // degrees
-        double referenceTemperature = 25; // °C
-        double temperatureCoefficient = 0.005; // per °C
-        double coolingFactor = 0.1; // °C per m/s
+    public void updatePowerForcast() {
+        // update power output forcast
+        // return the ouput
+    }
 
-        // Perform calculations
-        double adjustedIrradiance = calculateAdjustedIrradiance(solarIrradiance, cloudCover);
-        double adjustedTemperature = calculateAdjustedTemperature(currentTemperature, windSpeed, coolingFactor);
-        double temperatureEfficiency = calculateTemperatureEfficiency(panelEfficiency, temperatureCoefficient, adjustedTemperature, referenceTemperature);
-        double angleAdjustedIrradiance = calculateAngleAdjustedIrradiance(adjustedIrradiance, angleOfIncidence);
-        double powerOutput = calculatePowerOutput(angleAdjustedIrradiance, panelArea, panelEfficiency, temperatureEfficiency);
+    public double calculatePower(WeatherData weatherData, Panel panel) {
+        // caclulate the power output
 
-        // Output the result
-        System.out.println("Total Power Output: " + powerOutput + " W");
-        return powerOutput;
+        // // Example inputs
+        // double solarIrradiance = 800; // W/m²
+        
+        // // Weather forecast
+        // double cloudCover = 0.3; // 30%
+        // double currentTemperature = 35; // °C
+        // double windSpeed = 5; // m/s
+        
+        // // Solar panel
+        // double panelEfficiency = 0.20; // 20%
+        // double panelArea = 1.5; // m²
+        // double angleOfIncidence = 30; // degrees
+        // double referenceTemperature = 25; // °C
+        // double temperatureCoefficient = 0.005; // per °C
+        // double coolingFactor = 0.1; // °C per m/s
+
+        // // Perform calculations
+        // double adjustedIrradiance = calculateAdjustedIrradiance(solarIrradiance, cloudCover);
+        // double adjustedTemperature = calculateAdjustedTemperature(currentTemperature, windSpeed, coolingFactor);
+        // double temperatureEfficiency = calculateTemperatureEfficiency(panelEfficiency, temperatureCoefficient, adjustedTemperature, referenceTemperature);
+        // double angleAdjustedIrradiance = calculateAngleAdjustedIrradiance(adjustedIrradiance, angleOfIncidence);
+        // double powerOutput = calculatePowerOutput(angleAdjustedIrradiance, panelArea, panelEfficiency, temperatureEfficiency);
+
+        // // Output the result
+        // System.out.println("Total Power Output: " + powerOutput + " W");
+        return 0.0;
     }
 }

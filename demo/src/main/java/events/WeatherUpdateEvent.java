@@ -2,7 +2,7 @@ package events;
 
 import types.Event;
 import types.WeatherData;
-import types.EventType;
+import types.enums.EventType;
 
 public class WeatherUpdateEvent extends Event {
     private final WeatherData weatherData;
