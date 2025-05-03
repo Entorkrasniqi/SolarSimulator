@@ -15,6 +15,8 @@ import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import types.Panel;
+
 public class SolarPanelCalculatorController implements Initializable {
     
     // Top Section

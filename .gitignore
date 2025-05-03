@@ -3,3 +3,4 @@ javafx-sdk-17.0.14/
 temp/
 base.md
 .fake
+.env

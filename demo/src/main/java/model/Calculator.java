@@ -1,4 +1,4 @@
-package calculator;
+package model;
 
 
 /**
@@ -69,19 +69,15 @@ public class Calculator {
     }
 
     public double runCalc(){
-        
         // Example inputs
         double solarIrradiance = 800; // W/m²
-
         
         // Weather forecast
-
         double cloudCover = 0.3; // 30%
         double currentTemperature = 35; // °C
         double windSpeed = 5; // m/s
         
         // Solar panel
-
         double panelEfficiency = 0.20; // 20%
         double panelArea = 1.5; // m²
         double angleOfIncidence = 30; // degrees
