@@ -16,6 +16,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import types.Panel;
+import types.WeatherData;
+import types.LocationData;
 
 public class SolarPanelCalculatorController implements Initializable {
     
@@ -287,7 +289,7 @@ public class SolarPanelCalculatorController implements Initializable {
         Stage currentStage = (Stage) selectLocationBtn.getScene().getWindow();
         
         // Create callback to handle selected location data
-        Consumer<MapSelector.LocationData> locationCallback = (locationData) -> {
+        Consumer<LocationData> locationCallback = (locationData) -> {
             this.latitude = locationData.getLatitude();
             this.longitude = locationData.getLongitude();
             
@@ -307,9 +309,6 @@ public class SolarPanelCalculatorController implements Initializable {
             // Change the button text to indicate location is selected
             selectLocationBtn.setText("Location selected");
             selectLocationBtn.setStyle("-fx-text-fill: #009900;");
-            
-            // You can now handle the elevation data directly from the locationData object
-            // No need to fetch it separately
         };
         
         // Create and show the map selector

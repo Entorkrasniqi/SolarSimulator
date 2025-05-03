@@ -20,6 +20,8 @@ import javafx.beans.value.ObservableValue;
 import netscape.javascript.JSObject;
 import java.util.function.Consumer;
 
+import types.LocationData;
+
 public class MapSelector {
     private WebView webView;
     private WebEngine webEngine;
@@ -29,34 +31,6 @@ public class MapSelector {
     private TextField addressField;
     private Consumer<LocationData> locationCallback;
     private Stage mapStage;
-    
-    /**
-     * Data class to hold location information
-     */
-    public static class LocationData {
-        private final double latitude;
-        private final double longitude;
-        private final double elevation;
-        private final String address;
-        
-        public LocationData(double latitude, double longitude, double elevation, String address) {
-            this.latitude = latitude;
-            this.longitude = longitude;
-            this.elevation = elevation;
-            this.address = address;
-        }
-        
-        public double getLatitude() { return latitude; }
-        public double getLongitude() { return longitude; }
-        public double getElevation() { return elevation; }
-        public String getAddress() { return address; }
-        
-        @Override
-        public String toString() {
-            return String.format("Location: %.6f, %.6f, Elevation: %.1fm, Address: %s", 
-                                 latitude, longitude, elevation, address);
-        }
-    }
     
     /**
      * Creates a new map selector component
